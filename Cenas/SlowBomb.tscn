@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/gas/9.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/SlowBomb.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 82.7541, 57.2804 )
+
+[node name="Area2D" type="Area2D"]
+collision_mask = 7
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 4.4545, 0 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="CollisionShape2D"]
+modulate = Color( 0, 0.00392157, 0.235294, 0.721569 )
+position = Vector2( -4.4545, 1.00136e-05 )
+scale = Vector2( 1.6949, 1.69144 )
+texture = ExtResource( 1 )
+[connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_Area2D_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

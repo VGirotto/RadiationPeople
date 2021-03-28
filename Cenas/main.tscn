@@ -1,0 +1,497 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://main.gd" type="Script" id=1]
+[ext_resource path="res://Cenas/wall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Cenas/close.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Cenas/Gas.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/fonts/Planes_ValMore.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Cenas/Final.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Syringe.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Liquid.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Songs/06castle1.wav" type="AudioStream" id=9]
+[ext_resource path="res://Assets/Songs/11minigame1.wav" type="AudioStream" id=10]
+[ext_resource path="res://Assets/Songs/door.wav" type="AudioStream" id=11]
+[ext_resource path="res://Assets/Songs/put.wav" type="AudioStream" id=12]
+[ext_resource path="res://Assets/Songs/12win2NL.wav" type="AudioStream" id=13]
+[ext_resource path="res://Assets/Songs/13gameover3NL.wav" type="AudioStream" id=14]
+[ext_resource path="res://Assets/Songs/gas.wav" type="AudioStream" id=15]
+[ext_resource path="res://Assets/Songs/shot.wav" type="AudioStream" id=16]
+
+[sub_resource type="DynamicFont" id=1]
+size = 25
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 38
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 38
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.784314, 0.0588235, 0.0588235, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0, 0, 0, 1 )
+corner_detail = 20
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+expand_margin_top = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="DynamicFont" id=6]
+size = 250
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 350
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 500
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.219608, 0.811765, 0.219608, 1 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 450
+font_data = ExtResource( 5 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="bg" type="ColorRect" parent="."]
+margin_right = 1366.0
+margin_bottom = 768.0
+rect_pivot_offset = Vector2( 916.524, 613.003 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="Wall" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 84.0561, 398.393 )
+scale = Vector2( 4, 578 )
+
+[node name="Wall2" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 120.103, 299.622 )
+scale = Vector2( 4, 294 )
+
+[node name="Wall17" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 120, 568 )
+scale = Vector2( 4, 159 )
+
+[node name="Wall3" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 267.269, 150.6 )
+scale = Vector2( 299, 4 )
+
+[node name="Wall4" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 248.445, 109.773 )
+scale = Vector2( 333, 4 )
+
+[node name="Wall5" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 1187.54, 448.227 )
+scale = Vector2( 4, 400 )
+
+[node name="Wall6" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 1223, 451.779 )
+scale = Vector2( 4, 475 )
+
+[node name="Wall7" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 653.92, 687.132 )
+scale = Vector2( 1142, 4 )
+
+[node name="Wall8" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 381.942, 649.288 )
+scale = Vector2( 528, 4 )
+
+[node name="Wall16" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 938.044, 649.995 )
+scale = Vector2( 502, 4 )
+
+[node name="Wall9" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 643.818, 430.669 )
+scale = Vector2( 4, 436 )
+
+[node name="Wall10" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 688.024, 449.753 )
+scale = Vector2( 4, 400 )
+
+[node name="Wall11" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 415.617, 298.561 )
+scale = Vector2( 4, 294 )
+
+[node name="Wall22" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 415.617, 63.042 )
+scale = Vector2( 4, 98 )
+
+[node name="Wall20" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 988.202, 111.982 )
+scale = Vector2( 4, 203 )
+
+[node name="Wall21" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 946.177, 130.286 )
+scale = Vector2( 4, 168 )
+
+[node name="Wall12" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 267.303, 446.747 )
+scale = Vector2( 300, 4 )
+
+[node name="Wall18" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 286, 490 )
+scale = Vector2( 335, 4 )
+
+[node name="Wall13" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 450.676, 267.251 )
+scale = Vector2( 4, 440 )
+
+[node name="Wall14" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 937.277, 250.184 )
+scale = Vector2( 502, 4 )
+
+[node name="Wall23" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 796.696, 213.315 )
+scale = Vector2( 303, 4 )
+
+[node name="Wall24" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 1106.08, 213.315 )
+scale = Vector2( 238, 4 )
+
+[node name="Wall15" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 700.624, 12.882 )
+scale = Vector2( 573, 4 )
+
+[node name="Wall19" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 698.374, 48 )
+scale = Vector2( 500, 4 )
+
+[node name="Wall25" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 815.83, 424 )
+scale = Vector2( 260, 4 )
+
+[node name="Wall26" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 944.14, 335.387 )
+scale = Vector2( 4, 175 )
+
+[node name="lab" type="Label" parent="Walls"]
+margin_left = 791.923
+margin_top = 265.204
+margin_right = 836.923
+margin_bottom = 293.204
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "LAB"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GasTime" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="gas" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 552, 376 )
+
+[node name="Text" type="RichTextLabel" parent="."]
+margin_left = 96.0
+margin_top = 704.0
+margin_right = 1088.0
+margin_bottom = 752.0
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "Starts in: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Vaccine" type="RichTextLabel" parent="."]
+margin_left = 848.0
+margin_top = 704.0
+margin_right = 1232.0
+margin_bottom = 752.0
+custom_fonts/normal_font = SubResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CopButton" type="Button" parent="."]
+margin_left = 1248.0
+margin_top = 32.0
+margin_right = 1348.0
+margin_bottom = 62.0
+custom_fonts/font = SubResource( 4 )
+disabled = true
+text = "Add Cop"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MedButtun" type="Button" parent="."]
+margin_left = 1248.0
+margin_top = 80.0
+margin_right = 1348.0
+margin_bottom = 110.0
+custom_fonts/font = SubResource( 4 )
+disabled = true
+text = "Add Med"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SlowBomb" type="Button" parent="."]
+margin_left = 1248.0
+margin_top = 128.0
+margin_right = 1348.0
+margin_bottom = 158.0
+custom_fonts/font = SubResource( 4 )
+disabled = true
+text = "Slow Bomb"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimerHelp" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="door1" parent="doors" instance=ExtResource( 2 )]
+modulate = Color( 0.603922, 0.6, 0.6, 1 )
+position = Vector2( 632, 624 )
+scale = Vector2( 7, 50 )
+
+[node name="CloseButton1" parent="doors" instance=ExtResource( 3 )]
+margin_left = 528.0
+margin_top = 608.0
+margin_right = 528.0
+margin_bottom = 608.0
+doorNum = 1
+
+[node name="door2" parent="doors" instance=ExtResource( 2 )]
+modulate = Color( 0.603922, 0.6, 0.6, 1 )
+position = Vector2( 696, 188 )
+scale = Vector2( 7, 50 )
+
+[node name="CloseButton2" parent="doors" instance=ExtResource( 3 )]
+margin_left = 704.0
+margin_top = 176.0
+margin_right = 704.0
+margin_bottom = 176.0
+doorNum = 2
+
+[node name="door3" parent="doors" instance=ExtResource( 2 )]
+modulate = Color( 0.603922, 0.6, 0.6, 1 )
+position = Vector2( 128, 512 )
+scale = Vector2( 7, 50 )
+
+[node name="CloseButton3" parent="doors" instance=ExtResource( 3 )]
+margin_left = 136.0
+margin_top = 496.0
+margin_right = 136.0
+margin_bottom = 496.0
+doorNum = 3
+
+[node name="door4" parent="doors" instance=ExtResource( 2 )]
+modulate = Color( 0.603922, 0.6, 0.6, 1 )
+position = Vector2( 408, 176 )
+scale = Vector2( 7, 50 )
+
+[node name="CloseButton4" parent="doors" instance=ExtResource( 3 )]
+margin_left = 300.0
+margin_top = 160.0
+margin_right = 300.0
+margin_bottom = 160.0
+doorNum = 4
+
+[node name="door5" parent="doors" instance=ExtResource( 2 )]
+modulate = Color( 0.603922, 0.6, 0.6, 1 )
+position = Vector2( 936, 72 )
+scale = Vector2( 7, 50 )
+
+[node name="CloseButton5" parent="doors" instance=ExtResource( 3 )]
+margin_left = 828.0
+margin_top = 56.0
+margin_right = 828.0
+margin_bottom = 56.0
+doorNum = 5
+
+[node name="door6" parent="doors" instance=ExtResource( 2 )]
+modulate = Color( 0.603922, 0.6, 0.6, 1 )
+position = Vector2( 1164, 640 )
+rotation = 1.5708
+scale = Vector2( 7, 50 )
+
+[node name="CloseButton6" parent="doors" instance=ExtResource( 3 )]
+margin_left = 1080.0
+margin_top = 600.0
+margin_right = 1080.0
+margin_bottom = 600.0
+doorNum = 6
+
+[node name="VaccineTimer" type="Timer" parent="."]
+
+[node name="seringa" type="Sprite" parent="."]
+position = Vector2( 871.712, 340.834 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 7 )
+
+[node name="ProgressBar" type="ProgressBar" parent="seringa"]
+margin_left = -809.0
+margin_top = 839.0
+margin_right = 1265.0
+margin_bottom = 1189.0
+custom_styles/fg = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+step = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="seringa"]
+margin_left = -420.0
+margin_top = 1260.0
+margin_right = 847.0
+margin_bottom = 1611.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Vaccine"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="becker" type="Sprite" parent="."]
+position = Vector2( 752.383, 341.717 )
+scale = Vector2( 0.03, 0.03 )
+texture = ExtResource( 8 )
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="becker"]
+position = Vector2( -18.834, -1033.26 )
+scale = Vector2( 33.3333, 33.3333 )
+amount = 12
+draw_order = 1
+emission_shape = 1
+emission_sphere_radius = 8.0
+direction = Vector2( 1, 1 )
+spread = 112.74
+gravity = Vector2( 0, -50 )
+angular_velocity = 139.35
+angle = 123.9
+scale_amount = 3.0
+color = Color( 0.176471, 0.752941, 0.176471, 1 )
+anim_speed = 85.33
+
+[node name="Label" type="Label" parent="becker"]
+margin_left = -1566.66
+margin_top = 2100.02
+margin_right = 1545.34
+margin_bottom = 2600.02
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Contaminated"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="becker"]
+margin_left = -1799.99
+margin_top = 1380.0
+margin_right = 1635.01
+margin_bottom = 1942.0
+custom_styles/fg = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pauseBG" type="ColorRect" parent="."]
+visible = false
+modulate = Color( 0, 0, 0, 0.529412 )
+margin_right = 1366.0
+margin_bottom = 768.0
+rect_pivot_offset = Vector2( 916.524, 613.003 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackMenu" type="Button" parent="."]
+pause_mode = 2
+visible = false
+margin_left = 1104.0
+margin_top = 80.0
+margin_right = 1184.0
+margin_bottom = 110.0
+custom_fonts/font = SubResource( 4 )
+text = "Back to Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseButton" type="Button" parent="."]
+pause_mode = 2
+margin_left = 1104.0
+margin_top = 32.0
+margin_right = 1184.0
+margin_bottom = 62.0
+custom_fonts/font = SubResource( 4 )
+text = "Pause"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Final" parent="." instance=ExtResource( 6 )]
+pause_mode = 2
+visible = false
+position = Vector2( 472, 184 )
+z_index = 5
+
+[node name="sot1" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 9 )
+
+[node name="sot2" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 10 )
+
+[node name="Songs" type="Node2D" parent="."]
+pause_mode = 2
+
+[node name="put" type="AudioStreamPlayer" parent="Songs"]
+stream = ExtResource( 12 )
+
+[node name="shot" type="AudioStreamPlayer" parent="Songs"]
+stream = ExtResource( 16 )
+
+[node name="gas" type="AudioStreamPlayer" parent="Songs"]
+stream = ExtResource( 15 )
+
+[node name="win" type="AudioStreamPlayer" parent="Songs"]
+stream = ExtResource( 13 )
+
+[node name="gameover" type="AudioStreamPlayer" parent="Songs"]
+stream = ExtResource( 14 )
+
+[node name="door" type="AudioStreamPlayer" parent="Songs"]
+stream = ExtResource( 11 )
+[connection signal="timeout" from="GasTime" to="." method="_on_GasTime_timeout"]
+[connection signal="body_entered" from="gas" to="." method="_on_gas_body_entered"]
+[connection signal="pressed" from="CopButton" to="." method="_on_CopButton_pressed"]
+[connection signal="pressed" from="MedButtun" to="." method="_on_MedButtun_pressed"]
+[connection signal="pressed" from="SlowBomb" to="." method="_on_SlowBomb_pressed"]
+[connection signal="timeout" from="TimerHelp" to="." method="_on_TimerHelp_timeout"]
+[connection signal="timeout" from="VaccineTimer" to="." method="_on_VaccineTimer_timeout"]
+[connection signal="pressed" from="BackMenu" to="." method="_on_Back_to_Menu_pressed"]
+[connection signal="pressed" from="PauseButton" to="." method="_on_PauseButton_pressed"]
+[connection signal="finished" from="sot1" to="." method="_on_sot1_finished"]
+[connection signal="finished" from="sot2" to="." method="_on_sot2_finished"]

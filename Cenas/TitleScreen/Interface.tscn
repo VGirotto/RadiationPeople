@@ -1,0 +1,75 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scripts/TitleScreen/TitleScreen.gd" type="Script" id=1]
+[ext_resource path="res://Assets/logo2.png" type="Texture" id=2]
+[ext_resource path="res://Cenas/TitleScreen/ContinueButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Cenas/TitleScreen/NewGameButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Cenas/TitleScreen/CreditosButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Cenas/TitleScreen/FadeIn.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Songs/07island1v1.wav" type="AudioStream" id=7]
+
+[node name="TitleScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="VBoxContainer" parent="."]
+margin_left = 64.0
+margin_right = 1280.0
+margin_bottom = 652.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logo" type="TextureRect" parent="Menu"]
+margin_right = 1216.0
+margin_bottom = 400.0
+texture = ExtResource( 2 )
+stretch_mode = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu"]
+margin_top = 404.0
+margin_right = 1216.0
+margin_bottom = 652.0
+size_flags_vertical = 3
+
+[node name="Buttons" type="VBoxContainer" parent="Menu/HBoxContainer"]
+margin_left = 428.0
+margin_right = 788.0
+margin_bottom = 248.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+alignment = 1
+
+[node name="NewGameButton" parent="Menu/HBoxContainer/Buttons" instance=ExtResource( 4 )]
+margin_right = 360.0
+margin_bottom = 80.0
+scene_to_load = "res://Cenas/main.tscn"
+botao = "Novo Jogo"
+
+[node name="LeaderboardButton" parent="Menu/HBoxContainer/Buttons" instance=ExtResource( 3 )]
+margin_top = 84.0
+margin_right = 360.0
+margin_bottom = 164.0
+scene_to_load = "res://Cenas/TitleScreen/Leaderboard.tscn"
+botao = "Leaderboard"
+
+[node name="CreditosButton" parent="Menu/HBoxContainer/Buttons" instance=ExtResource( 5 )]
+margin_top = 168.0
+margin_right = 360.0
+margin_bottom = 248.0
+scene_to_load = "res://Cenas/TitleScreen/Creditos.tscn"
+botao = "Creditos"
+
+[node name="FadeIn" parent="." instance=ExtResource( 6 )]
+visible = false
+
+[node name="sot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+[connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]
+[connection signal="finished" from="sot" to="." method="_on_sot_finished"]

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/06castle1.wav-c2f5044d1b51e931aee4bdfd36fd4c9a.sample"
+
+[deps]
+
+source_file="res://Assets/Songs/06castle1.wav"
+dest_files=[ "res://.import/06castle1.wav-c2f5044d1b51e931aee4bdfd36fd4c9a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

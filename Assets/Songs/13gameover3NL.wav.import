@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/13gameover3NL.wav-a004173000b933afed5aebc32119e2b8.sample"
+
+[deps]
+
+source_file="res://Assets/Songs/13gameover3NL.wav"
+dest_files=[ "res://.import/13gameover3NL.wav-a004173000b933afed5aebc32119e2b8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
